@@ -29,7 +29,7 @@ public class BonusServiceTest {
 
         BonusService service = new BonusService();
         int expected = 500;
-        long actual = service.calculate(1000000, true);
+        long actual = service.calculate(1000000, false);
         //System.out.println(bonus);
         Assertions.assertEquals(expected, actual);
     }
@@ -38,8 +38,8 @@ public class BonusServiceTest {
     public void shouldCalculateForUnRegisteredAndUnderLimit() {
 
         BonusService service = new BonusService();
-        int expected = 30;
-        long actual = service.calculate(1000, true);
+        int expected = 10;
+        long actual = service.calculate(1000, false);
         //System.out.println(bonus);
         Assertions.assertEquals(expected, actual);
     }
